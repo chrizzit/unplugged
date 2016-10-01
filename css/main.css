@@ -95,6 +95,120 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+/*font-family: 'Sansita One', cursive;*/
+@font-face {
+font-family: fontawesome;
+src: url('fonts/FontAwesome.otf') format('opentype');
+}
+
+/* Header ================ */
+header{
+    width: 100%;
+
+}
+#logo{
+
+}
+nav {
+    width: 100%;
+}
+nav ul{
+    width: 100%;
+}
+
+/* Main Content ================ */
+main {
+    width: 96%;
+    padding: 0 2%;
+}
+.hero-area {
+
+}
+
+/* HOMEPAGE and REVIEWS ========= */
+
+/* Top Story ========= */
+.top-story {
+    width: 100%;
+}
+figure {
+
+}
+.top-img {
+    width: 100%;
+}
+.top-info {
+
+}
+h1 {
+
+}
+p {
+
+}
+
+/*Sidebar area =========== */
+.sidebar {
+    width: 100%;
+}
+.newsletter {
+
+}
+.newsletter-signup {
+
+}
+.btn {
+
+}
+.sidebar-upcoming {
+    display: none;
+}
+.sidebar-faq {
+    display: none;
+}
+
+/* News Feed ================ */
+.feed {
+    width: 100%;
+}
+.feed-item {
+    clear: both;
+}
+.feed-type {
+
+}
+.feed-img {
+    width: 45%;
+    float: left;
+}
+.feed-info {
+    width: 42%;
+    float: left;
+}
+feed p{
+    display: none;
+}
+
+/* Details pages ========= */
+.reviews-img, .news-img {
+    width: 100%;
+}
+/* Footer ================ */
+footer {
+    width: 100%;
+    margin: auto;
+}
+#footer-logo {
+    width: 47.5%;
+    margin: auto;
+}
+/* News Detail Page ========= */
+.detailed-content {
+    width: 100%;
+}
+
+/* Reviews Detail Page========= */
+
 
 
 
@@ -191,15 +305,161 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media screen and (min-width: 768px) {
+    /* Header =================================*/
+    .main-header {
+        width: 94%;
+    }
+    #logo {
+        width: 40%;
+        float: left;
+    }
+    nav {
+        width: 60%;
+        float: right;
+    }
+
+    /* Top Story =================================*/
+    .top-story {
+        width: 100%;
+    }
+    .top-img {
+        width: 57%;
+        float: left;
+        padding-right: 3%;
+    }
+    .top-info {
+        width: 40%;
+        float: left;
+    }
+
+    /* Sidebar =================================*/   
+    .sidebar {
+        clear: both;
+        width: 37%;
+        float: right;
+    } 
+    .sidebar-upcoming, .sidebar-faq {
+        display: block;
+    } 
+
+    /* News/reviews Feed Section ===================*/
+    .feed {
+        width: 60%;
+        float: left;
+    }
+    .feed-img {
+        width: 35%;
+    }
+
+    /* Footer =================================*/
+    footer {
+        width: 100%;
+        clear: both;
+    }
+    #footer-logo {
+        width: 30%;
+        margin: auto;
+    }
+    .clear-footer {
+        clear: both;
+    }
+
+    /* Detailes Pages =================================*/
+    .reviews-img, .news-img {
+        width: 50%;
+        margin: 0px;
+        float: left;
+    }
+    .detail-title {
+        width: 47%;
+        float: right;
+    }
+    aside.detail {
+        width: 100%;
+    }
+    .detail .newsletter h2 {
+        display: inline;
+    }
+    .detail .newsletter input {
+        display: inline;
+    }
+
 }
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
+@media screen and (min-width: 940px) {
+    /* Header =================================*/
+    #logo {
+        width: 30%;
+    }
+    nav {
+        width: 60%;
+    }
+
+    /* Top Story =================================*/
+    .top-story {
+        width: 65%;
+        float: left;
+        border: none;
+    }
+    .top-img {
+        width: 100%;        
+    }
+    .top-info {
+        width: 100%;
+        float: none;
+    }
+
+    /* Sidebar =================================*/   
+    .sidebar {
+        clear: none;
+        width: 30%;
+        float: right;
+    } 
+
+    /* News/reviews Feed Section ===================*/
+    .feed {
+        clear: both;
+        width: 100%;
+        float: none;
+    }
+    .feed p {
+        display: block;
+    }
+    .feed-img {
+        width: 20%;
+    }
+
+    /* Footer =================================*/
+    footer {
+        width: 100%;
+    }
+    #footer-logo {
+        width: 30%;
+    }
+
+    /* Detailes Pages =================================*/
+    article.detailed-content {
+        width: 65%;
+        float: left;
+    }
+    .reviews-img,
+    .news-img {
+        width: 100%;
+        float: none;
+    }
+    .detail-title {
+        width: 100%;
+        float: none;
+    }
+    aside.detail {
+        width: 30%;
+        float: left;
+    }
+    .detail .newsletter input {
+        display: block;
+        width: 100%;
+    }
 }
 
 /* ==========================================================================

@@ -1,0 +1,45 @@
+.Footer_Logo {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1024px;
+  height: 2080px;
+  z-index: 10;
+}
+.Unplugged {
+  font-size: 30px;
+  font-family: "SansitaOne";
+  color: rgb(255, 255, 255);
+  line-height: 0.8;
+  position: absolute;
+  left: 433.844px;
+  top: 2061.828px;
+  z-index: 9;
+}
+.logo_highlight {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 1024px;
+  height: 2080px;
+  z-index: 8;
+}
+.logo_paper_pallet {
+  background-image: url("logo paper pallet.png");
+  position: absolute;
+  left: 411px;
+  top: 2020px;
+  width: 209px;
+  height: 61px;
+  z-index: 7;
+}
+.Logo_paper_pallete_shadw {
+  background-image: url("Logo paper pallete shadw.png");
+  opacity: 0.149;
+  position: absolute;
+  left: 405px;
+  top: 2020px;
+  width: 220px;
+  height: 63px;
+  z-index: 6;
+}

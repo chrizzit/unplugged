@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="../css/normalize.css">
         <link rel="stylesheet" href="../css/main.css">
         <script src="../js/vendor/modernizr-2.8.3.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Sansita+One" rel="stylesheet">
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -20,7 +21,63 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <p>Hello world! This is HTML5 Boilerplate.</p>
+        
+        <header>
+            <h1 id="logo">
+                <a href="../index.html"><img src="../img/logo.png" alt="Unplugged" /></a>
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="../about/faqs.html">FAQ</a></li>
+                    <li><a href="../concerts/index.html">Concerts</a></li>
+                    <li><a href="../reviews/index.html">Reviews</a></li>
+                    <li><a href="../about/index.html">About Us</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <article class="detailed-content">
+                <figure class="reviews-img">
+                    <img src="../img/top-review-photo.png" alt="Top Review Photo" /><!-- Check this  -->
+                </figure>
+               
+                <header class="article-header detail-title">
+                    <h1>Beirut's New Album - Their Best Album Yet</h1>
+                    <ul class="article-meta-info">
+                        <li class="article-author">Author Name</li>
+                        <li class="article-pub-date"><time>June 09, 2015</time></li>
+                    </ul>
+                </header>
+                    
+                <p><strong>Byline: </strong>Lorem ipsum dolor sit amet, eu epicurei aliquando mel. Blandit consetetur id nec, elitr dolorem delicatissimi et eam. Cum id nibh nulla mentitum, recteque omittantur voluptatibus ut vim, nonumes corrumpit cum ei. Efficiendi signiferumque et usu, porro partem qui et. Aeque dolorem albucius te duo.</p>
+
+                <div class="clearfix"></div>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi.</p>
+
+                <p>Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue. Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit id, lorem.</p>
+
+                <p>Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero. Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy metus. Vestibulum volutpat pretium libero. Cras id dui.</p>
+
+            </article>
+
+            <!-- Side Bar Section -->
+            <aside class="sidebar detail">
+                <div class="newsletter">
+                    <h2>Newsletter Signup</h2>
+                    <form class="newsletter-signup">
+                        <input type="text" />
+                        <input type="submit" class="btn" value="Sign Up" />
+                    </form>
+                </div>  <!-- Newsletter -->
+             </aside>
+        </main>
+
+        <footer class="clear-footer">
+            <div id="footer-logo">
+                <img src="../img/logo.png" alt="Footer Logo Unplugged" />
+            </div>
+        </footer>
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
