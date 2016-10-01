@@ -94,35 +94,112 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-/*font-family: 'Sansita One', cursive;*/
+/* COLORS ===========================================
+Dark Pink (Magenta): @b21e49;
+Light Grey: #eeeeee;
+Bright Pink: #ff1256;
+Dark Grey: #222222;
+Blue: #23a4cc;
+======================================== */
+/* FONTS =============================================
+font-family: 'Sansita One', cursive;
+font-family: 'Source Sans Pro', sans-serif;
+======================================== */
 @font-face {
 font-family: fontawesome;
 src: url('fonts/FontAwesome.otf') format('opentype');
 }
 
-/* Header ================ */
-header{
+body, html {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: #222;
+    background-color: #eee;
+}
+a {
+    font-weight: bold;
+    color: #23a4cc;
+    text-decoration: none;
+}
+p {
+    font-size: 1em;
+    line-height: 1.4;
+}
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+h1 {
+    font-size: 1.4em;
+    line-height: 1.6;
+}
+h2 {
+    font-size: 1em;
+}
+.btn {
+    background-color: #b21e49;
+    border: none;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 2.5;
+    text-align: center;
+    box-shadow: 2px 2px 0px #dadada;
+    height: 2.5em;
     width: 100%;
+    display: block;
+}
+    .btn::hover {
+        background-color: #ff1256
+    }
+input.btn {
+    background-color: #ff1256;
+}
+    input.btn:hover {
+        background-color: #b21e49;
+    }
+.no-border {
+    border: none;
+}
 
+/* Header ================ */
+.main-header{
+    width: 100%;
+    background-color: #eee;
+    margin: auto;
 }
 #logo{
-
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
 }
 nav {
     width: 100%;
+    background: #ddd;
 }
 nav ul{
-    width: 100%;
+    list-style: none;
+    padding: 0;
 }
+    nav ul li {
+        border-bottom: 1px solid #ccc;
+        text-align: center;
+        padding: 0 1%;
+    }
+        nav ul li a {
+            font-size: 1.125em;
+            text-transform: uppercase;
+            color: #333;
+        }
+            nav ul li a:hover {
+                color: #ff1256;
+            }
 
 /* Main Content ================ */
 main {
     width: 96%;
     padding: 0 2%;
-}
-.hero-area {
-
+    margin: auto;
+    max-width: 960px;
 }
 
 /* HOMEPAGE and REVIEWS ========= */
@@ -130,21 +207,11 @@ main {
 /* Top Story ========= */
 .top-story {
     width: 100%;
-}
-figure {
-
+    border-bottom: 1px solid #ccc;
 }
 .top-img {
     width: 100%;
-}
-.top-info {
-
-}
-h1 {
-
-}
-p {
-
+    margin: 0;
 }
 
 /*Sidebar area =========== */
@@ -152,46 +219,70 @@ p {
     width: 100%;
 }
 .newsletter {
-
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
 }
-.newsletter-signup {
-
-}
-.btn {
-
-}
-.sidebar-upcoming {
-    display: none;
-}
+    .newsletter input {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .newsletter input[type="text"] {
+        margin-bottom: 10px;
+        padding: 5px 0;
+    }
+.sidebar-upcoming,
 .sidebar-faq {
     display: none;
+}
+.detail .newsletter {
+    border-bottom: none;
 }
 
 /* News Feed ================ */
 .feed {
     width: 100%;
 }
+    feed p{
+        display: none;
+    }
 .feed-item {
     clear: both;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 15px;
 }
-.feed-type {
+    .feed-type {
+        text-transform: uppercase;
+        font-size: 0.8em;
+    }
+    .feed-item h2 {
+        margin: 0;
+    }
+    .feed-item h2 a {
+        color: #222;
+    }
+    .feed-item h2 a:hover {
+        color: #23a4cc;
+    }
+        .feed-item:nth-child(7) {
+            border-bottom: none;
+        }
+    .feed-img {
+        width: 45%;
+        float: left;
+        margin: 0;
+        padding-right: 3%;
+    }
+    .feed-info {
+        width: 42%;
+        float: left;
+    }
 
-}
-.feed-img {
-    width: 45%;
-    float: left;
-}
-.feed-info {
-    width: 42%;
-    float: left;
-}
-feed p{
-    display: none;
-}
 
 /* Details pages ========= */
-.reviews-img, .news-img {
+.reviews-img,
+.news-img {
     width: 100%;
+    margin: 0;
 }
 /* Footer ================ */
 footer {
@@ -309,6 +400,10 @@ footer {
     /* Header =================================*/
     .main-header {
         width: 94%;
+        max-width: 960px;
+        margin: auto;
+        background-color: #ddd;
+        padding: 0 3%;
     }
     #logo {
         width: 40%;
@@ -318,10 +413,23 @@ footer {
         width: 60%;
         float: right;
     }
+    nav ul {
+        margin: 0;
+    }
+    nav ul li {
+        display: inline;
+        padding: 0 1%;
+        border: none;
+        line-height: 2;
+        position: relative;
+        top: 16px;
+    }
 
     /* Top Story =================================*/
     .top-story {
         width: 100%;
+        padding-top: 40px;
+        padding-bottom: 20px;
     }
     .top-img {
         width: 57%;
@@ -339,17 +447,24 @@ footer {
         width: 37%;
         float: right;
     } 
-    .sidebar-upcoming, .sidebar-faq {
+    .sidebar-upcoming,
+    .sidebar-faq {
         display: block;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
     } 
 
     /* News/reviews Feed Section ===================*/
     .feed {
         width: 60%;
         float: left;
+        border-right: 1px solid #ccc;
     }
     .feed-img {
         width: 35%;
+    }
+    .feed-info {
+        width: 57%;
     }
 
     /* Footer =================================*/
@@ -366,28 +481,63 @@ footer {
     }
 
     /* Detailes Pages =================================*/
-    .reviews-img, .news-img {
+    .detailed-content {
+        padding-top: 30px;
+    }
+    .reviews-img,
+    .news-img {
         width: 50%;
         margin: 0px;
         float: left;
+        margin-right: 3%;
     }
     .detail-title {
         width: 47%;
-        float: right;
+        float: left;
     }
     aside.detail {
         width: 100%;
     }
-    .detail .newsletter h2 {
-        display: inline;
+        aside.detail .newsletter {
+            border: none;
+        }
+        aside.detail .newsletter input {
+            display: inline;
+            width: 70%;
+        }
+        aside.detail .newsletter .btn {
+            widows: 25%;
+        }
+        aside.detail .newsletter input[type="text"] {
+            padding: 7ps 0;
+            margin-right: 2%;
+        }
+    ul.article-meta-info {
+        list-style: none;
+        padding: 0;
+        width: 100%;
+        height: 2em;
     }
-    .detail .newsletter input {
-        display: inline;
-    }
-
+        ul.article-meta-info li {
+            display: inline;
+            margin-bottom: 10px;
+        }
+        .article-author {
+            padding-right: 10px;
+            border-right: 1px solid;
+            margin-right: 10px;
+        }
 }
 
 @media screen and (min-width: 940px) {
+    h1 {
+        font-size: 1.6em;
+        line-height: 1.8;
+    }
+    h2 {
+        font-size: 1.4em;
+    }
+
     /* Header =================================*/
     #logo {
         width: 30%;
@@ -395,17 +545,30 @@ footer {
     nav {
         width: 60%;
     }
+    nav ul li {
+        top: 28px;
+    }
 
+    /* Main =================================*/
+    main {
+        margin-top: 20px;
+    }
     /* Top Story =================================*/
     .top-story {
         width: 65%;
         float: left;
         border: none;
+        padding-top: 10px;
+        border-right:1px solid #ccc;
+        padding-right:2%;
     }
     .top-img {
-        width: 100%;        
+        width: 100%;
+        max-width: 620px;
+        padding-bottom: 1em;
     }
-    .top-info {
+    
+    .top-info{
         width: 100%;
         float: none;
     }
@@ -415,17 +578,27 @@ footer {
         clear: none;
         width: 30%;
         float: right;
-    } 
+    }
+    .sidebar-faq {
+        border: none;
+    }
 
     /* News/reviews Feed Section ===================*/
     .feed {
         clear: both;
         width: 100%;
         float: none;
+        padding-top: 20px;
+        border-top: 1px solid #ccc;
+        border-right: none;
     }
-    .feed p {
-        display: block;
-    }
+        .feed p {
+            display: block;
+            margin-top: 0;
+        }
+        .feed h2 {
+            margin: 0;
+        }
     .feed-img {
         width: 20%;
     }
@@ -435,13 +608,15 @@ footer {
         width: 100%;
     }
     #footer-logo {
-        width: 30%;
+        width: 20%;
     }
 
     /* Detailes Pages =================================*/
     article.detailed-content {
         width: 65%;
         float: left;
+        padding-right: 2.5%;
+        border-right: 1px solid #ccc;
     }
     .reviews-img,
     .news-img {
@@ -455,11 +630,19 @@ footer {
     aside.detail {
         width: 30%;
         float: left;
+        padding-left: 2%;
     }
-    .detail .newsletter input {
-        display: block;
-        width: 100%;
-    }
+        aside.detail .newsletter input {
+            display: block;
+            width: 100%;
+        }
+        aside.detail .newsletter .btn{
+            width: 100%;
+        }
+    
+        aside.detail .newsletter input[type="text"] {
+            margin-right: 0;
+        }
 }
 
 /* ==========================================================================
