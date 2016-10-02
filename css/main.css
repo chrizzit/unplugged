@@ -160,6 +160,10 @@ input.btn {
 .no-border {
     border: none;
 }
+img {
+    width: 100%;
+    height: auto;
+}
 
 /* Header ================ */
 .main-header{
@@ -172,6 +176,11 @@ input.btn {
     margin: 0 auto;
     text-align: center;
 }
+    #logo img {
+        width: 100%;
+        margin: auto;
+        max-width: 312px;
+    }
 nav {
     width: 100%;
     background: #ddd;
@@ -211,6 +220,7 @@ main {
 }
 .top-img {
     width: 100%;
+    height: auto;
     margin: 0;
 }
 
@@ -284,33 +294,99 @@ main {
     width: 100%;
     margin: 0;
 }
+/* News Detail Page ========= */
+.detailed-content {
+    width: 100%;
+}
+/* ABOUT PAGE ================================ */
+.contact-info {
+    width: 100%;
+    padding-top: 30px;
+}
+    .contact-info ul {
+        list-style: none;
+        padding: 0px;
+    }
+        .contact-info ul li {
+            display: inline-block;
+            vertical-align: top;
+        }
+.map-container {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+}
+.map-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.strong {
+    font-weight: 700;
+}
+.mission{
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    padding: 15 px 0;
+}
+.team{
+    padding-top: 15px;
+}
+.team-member{
+    padding: 15px 0;
+}
+.team-img{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 40%;
+    padding-bottom: 40%;
+    float: left;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+}
+.team-name{
+    
+}
+.team-title{
+    
+}
+.team-description{
+
+}
+
+#team-img-jack {
+    background-image:url('../img/team-member-1.jpg');
+}
+#team-img-lana {
+    background-image:url('../img/team-member-2.jpg');
+}
+#team-img-willow {
+    background-image:url('../img/team-member-3.jpg');
+}
+#team-img-jack,
+#team-img-lana,
+#team-img-willow {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 /* Footer ================ */
 footer {
     width: 100%;
     margin: auto;
+    border-top: 1px solid #ccc;
+    padding-top: 20px;
+    margin-top: 20px;
 }
 #footer-logo {
     width: 47.5%;
     margin: auto;
 }
-/* News Detail Page ========= */
-.detailed-content {
-    width: 100%;
-}
-
-/* Reviews Detail Page========= */
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -467,19 +543,6 @@ footer {
         width: 57%;
     }
 
-    /* Footer =================================*/
-    footer {
-        width: 100%;
-        clear: both;
-    }
-    #footer-logo {
-        width: 30%;
-        margin: auto;
-    }
-    .clear-footer {
-        clear: both;
-    }
-
     /* Detailes Pages =================================*/
     .detailed-content {
         padding-top: 30px;
@@ -527,6 +590,58 @@ footer {
             border-right: 1px solid;
             margin-right: 10px;
         }
+        /* ABOUT PAGE ================================ */
+   .contact-info{
+        width: 40%;
+        float: left;
+    }
+    .map-container{
+        position: relative;
+        padding-bottom: 40%;
+        height: 0;
+        overflow: hidden;
+        width: 58%;
+        float: left;
+        border: 1px solid #333;
+        margin-bottom: 40px;
+        margin-top: 30px;
+    }
+        .map-container iframe {
+            position: absolute;
+            top:0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    .mission{
+        border-top: 1px solid #ccc;
+        border-bottom: 1px solid #ccc;
+        padding: 15px 0;
+    }
+    .team{
+        padding-top: 15px;
+    }
+    .team-member{
+        padding: 15px 0;
+    }
+    .team-img{
+        width: 20%;
+        padding-bottom: 20%;
+        margin-right: 10%;
+    }
+
+    /* Footer =================================*/
+    footer {
+        width: 100%;
+        clear: both;
+    }
+    #footer-logo {
+        width: 30%;
+        margin: auto;
+    }
+    .clear-footer {
+        clear: both;
+    }
 }
 
 @media screen and (min-width: 940px) {
@@ -567,6 +682,9 @@ footer {
         max-width: 620px;
         padding-bottom: 1em;
     }
+    .top-img img {
+        max-width: 620px;
+    }
     
     .top-info{
         width: 100%;
@@ -603,15 +721,7 @@ footer {
         width: 20%;
     }
 
-    /* Footer =================================*/
-    footer {
-        width: 100%;
-    }
-    #footer-logo {
-        width: 20%;
-    }
-
-    /* Detailes Pages =================================*/
+    /* Detailed Pages =================================*/
     article.detailed-content {
         width: 65%;
         float: left;
@@ -643,6 +753,14 @@ footer {
         aside.detail .newsletter input[type="text"] {
             margin-right: 0;
         }
+
+    /* Footer =================================*/
+    footer {
+        width: 100%;
+    }
+    #footer-logo {
+        width: 20%;
+    }
 }
 
 /* ==========================================================================
