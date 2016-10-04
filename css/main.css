@@ -28,12 +28,10 @@ html {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 ::selection {
     background: #b3d4fc;
     text-shadow: none;
 }
-
 /*
  * A better looking default horizontal rule
  */
@@ -46,7 +44,6 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
@@ -101,15 +98,6 @@ Bright Pink: #ff1256;
 Dark Grey: #222222;
 Blue: #23a4cc;
 ======================================== */
-/* FONTS =============================================
-font-family: 'Sansita One', cursive;
-font-family: 'Source Sans Pro', sans-serif;
-======================================== */
-@font-face {
-font-family: fontawesome;
-src: url('fonts/FontAwesome.otf') format('opentype');
-}
-
 body, html {
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 16px;
@@ -124,6 +112,10 @@ a {
 p {
     font-size: 1em;
     line-height: 1.4;
+}
+img {
+    width: 100%;
+    height: auto;
 }
 h1, h2, h3, h4 {
     font-weight: 700;
@@ -148,21 +140,23 @@ h2 {
     width: 100%;
     display: block;
 }
-    .btn::hover {
+    .btn:hover {
         background-color: #ff1256
     }
+
+    .btn i {
+        padding-right: 10px;
+    }
+
 input.btn {
-    background-color: #ff1256;
+    background-color: #b21e49;
 }
     input.btn:hover {
-        background-color: #b21e49;
+        background-color: #ff1256;
     }
+
 .no-border {
     border: none;
-}
-img {
-    width: 100%;
-    height: auto;
 }
 
 /* Header ================ */
@@ -171,19 +165,24 @@ img {
     background-color: #eee;
     margin: auto;
 }
+
 #logo{
     width: 100%;
     margin: 0 auto;
-    text-align: center;
+    /*text-align: center;*/
 }
+
     #logo img {
         width: 100%;
         margin: auto;
         max-width: 312px;
-    }
+    }    
 nav {
     width: 100%;
     background: #ddd;
+}
+nav i{
+	padding-right:10px;
 }
 nav ul{
     list-style: none;
@@ -214,6 +213,7 @@ main {
 /* HOMEPAGE and REVIEWS ========= */
 
 /* Top Story ========= */
+
 .top-story {
     width: 100%;
     border-bottom: 1px solid #ccc;
@@ -223,8 +223,12 @@ main {
     height: auto;
     margin: 0;
 }
+    .top-img img{
+		width: 100%;
+	}
 
 /*Sidebar area =========== */
+
 .sidebar {
     width: 100%;
 }
@@ -240,21 +244,25 @@ main {
         margin-bottom: 10px;
         padding: 5px 0;
     }
+
 .sidebar-upcoming,
 .sidebar-faq {
     display: none;
 }
+
 .detail .newsletter {
     border-bottom: none;
 }
 
 /* News Feed ================ */
+
 .feed {
     width: 100%;
 }
-    feed p{
+    .feed p{
         display: none;
     }
+
 .feed-item {
     clear: both;
     border-bottom: 1px solid #ccc;
@@ -264,29 +272,33 @@ main {
         text-transform: uppercase;
         font-size: 0.8em;
     }
+
     .feed-item h2 {
         margin: 0;
     }
+
     .feed-item h2 a {
         color: #222;
     }
     .feed-item h2 a:hover {
         color: #23a4cc;
     }
+
         .feed-item:nth-child(7) {
             border-bottom: none;
         }
+
     .feed-img {
         width: 45%;
         float: left;
         margin: 0;
         padding-right: 3%;
     }
+
     .feed-info {
         width: 42%;
         float: left;
     }
-
 
 /* Details pages ========= */
 .reviews-img,
@@ -294,23 +306,65 @@ main {
     width: 100%;
     margin: 0;
 }
-/* News Detail Page ========= */
-.detailed-content {
-    width: 100%;
+
+/* CONCERT PAGE ================================ */
+.concert-item{
+    padding-top: 5%;
 }
+
+.concert-item h3{
+    text-align: center;
+    text-transform: uppercase;
+    border: 2px solid #ddd;
+    width: 3em;
+    height: 3em;
+    float: left;
+    margin: 0 5% 0 0;
+}
+
+.concert-item p{
+    display: block;
+    margin: 0;
+    line-height: 1;
+}
+
+.concert-item:nth-child(7){
+    border-bottom: 1px solid #ccc;
+}
+
+.concert-item:nth-child(10){
+    border-bottom: none;
+}
+.concert-item:nth-child(11){
+    border-bottom: none;
+}
+
+.concert-copy{
+    float: left;
+    width: 75%;
+}
+
+.concert-main aside{
+    display: none;
+}
+
 /* ABOUT PAGE ================================ */
+.contact-area {
+    padding-top: 30px;
+}
 .contact-info {
     width: 100%;
     padding-top: 30px;
 }
     .contact-info ul {
         list-style: none;
-        padding: 0px;
+        padding: 0;
     }
         .contact-info ul li {
             display: inline-block;
             vertical-align: top;
         }
+
 .map-container {
     position: relative;
     padding-bottom: 75%;
@@ -324,13 +378,12 @@ main {
     width: 100%;
     height: 100%;
 }
+
 .strong {
     font-weight: 700;
 }
 .mission{
-    border-top: 1px solid #ccc;
-    border-bottom: 1px solid #ccc;
-    padding: 15 px 0;
+    width: 100%;
 }
 .team{
     padding-top: 15px;
@@ -341,7 +394,6 @@ main {
 .team-img{
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat;
     width: 40%;
     padding-bottom: 40%;
     float: left;
@@ -349,15 +401,14 @@ main {
     border: 1px solid #ccc;
 }
 .team-name{
-    
+    margin-bottom: 0;
 }
 .team-title{
-    
+    margin-top: 0;
 }
 .team-description{
-
+display: none;
 }
-
 #team-img-jack {
     background-image:url('../img/team-member-1.jpg');
 }
@@ -367,14 +418,20 @@ main {
 #team-img-willow {
     background-image:url('../img/team-member-3.jpg');
 }
-#team-img-jack,
-#team-img-lana,
-#team-img-willow {
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-}
 
+/* FAQ PAGE ================================ */
+	.faq-item{
+		border-bottom: 1px solid #cccccc;
+	}
+
+	.faq-item:nth-child(5){
+		border-bottom: none;
+	}
+
+	.faq-item h3{
+		font-weight: 400;
+	}
+    
 /* Footer ================ */
 footer {
     width: 100%;
@@ -383,12 +440,11 @@ footer {
     padding-top: 20px;
     margin-top: 20px;
 }
+
 #footer-logo {
     width: 47.5%;
     margin: auto;
 }
-
-
 
 
 
@@ -403,7 +459,6 @@ footer {
 .hidden {
     display: none !important;
 }
-
 /*
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
@@ -419,13 +474,11 @@ footer {
     position: absolute;
     width: 1px;
 }
-
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
     clip: auto;
@@ -435,7 +488,6 @@ footer {
     position: static;
     width: auto;
 }
-
 /*
  * Hide visually and from screen readers, but maintain layout
  */
@@ -443,7 +495,6 @@ footer {
 .invisible {
     visibility: hidden;
 }
-
 /*
  * Clearfix: contain floats
  *
@@ -461,11 +512,9 @@ footer {
     content: " "; /* 1 */
     display: table; /* 2 */
 }
-
 .clearfix:after {
     clear: both;
 }
-
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
@@ -474,6 +523,7 @@ footer {
 
 @media screen and (min-width: 768px) {
     /* Header =================================*/
+
     .main-header {
         width: 94%;
         max-width: 960px;
@@ -502,6 +552,7 @@ footer {
     }
 
     /* Top Story =================================*/
+
     .top-story {
         width: 100%;
         padding-top: 40px;
@@ -517,12 +568,14 @@ footer {
         float: left;
     }
 
-    /* Sidebar =================================*/   
+    /* Sidebar =================================*/
+
     .sidebar {
         clear: both;
         width: 37%;
         float: right;
     } 
+
     .sidebar-upcoming,
     .sidebar-faq {
         display: block;
@@ -531,29 +584,42 @@ footer {
     } 
 
     /* News/reviews Feed Section ===================*/
+
     .feed {
         width: 60%;
         float: left;
         border-right: 1px solid #ccc;
     }
+
+    .feed h2 {
+        font-size: 1.125em;
+    }
+
     .feed-img {
         width: 35%;
     }
+
+    .feed-item {
+        padding-right: 17px;
+    }
+
     .feed-info {
         width: 57%;
     }
 
     /* Detailes Pages =================================*/
+
     .detailed-content {
         padding-top: 30px;
-    }
+    }    
     .reviews-img,
     .news-img {
         width: 50%;
-        margin: 0px;
+        margin: 0;
         float: left;
         margin-right: 3%;
     }
+
     .detail-title {
         width: 47%;
         float: left;
@@ -564,38 +630,45 @@ footer {
         aside.detail .newsletter {
             border: none;
         }
+
         aside.detail .newsletter input {
             display: inline;
             width: 70%;
         }
+
         aside.detail .newsletter .btn {
-            widows: 25%;
+            width: 25%;
         }
+
         aside.detail .newsletter input[type="text"] {
-            padding: 7ps 0;
+            padding: 7px 0;
             margin-right: 2%;
         }
+
     ul.article-meta-info {
         list-style: none;
         padding: 0;
         width: 100%;
         height: 2em;
     }
+
         ul.article-meta-info li {
             display: inline;
             margin-bottom: 10px;
         }
+
         .article-author {
             padding-right: 10px;
             border-right: 1px solid;
             margin-right: 10px;
         }
-        /* ABOUT PAGE ================================ */
-   .contact-info{
+
+    /* ABOUT PAGE ================================ */
+   .contact-info {
         width: 40%;
         float: left;
     }
-    .map-container{
+    .map-container {
         position: relative;
         padding-bottom: 40%;
         height: 0;
@@ -613,154 +686,221 @@ footer {
             width: 100%;
             height: 100%;
         }
-    .mission{
+    .mission {
         border-top: 1px solid #ccc;
         border-bottom: 1px solid #ccc;
         padding: 15px 0;
     }
-    .team{
+    .team {
         padding-top: 15px;
     }
-    .team-member{
+    .team-member {
         padding: 15px 0;
     }
-    .team-img{
+    .team-img {
         width: 20%;
         padding-bottom: 20%;
         margin-right: 10%;
     }
 
+/* CONCERT PAGE ================================ */
+	.concert-feed {
+		width: 100%;
+		border-right: none;
+	}
+
+	.concert-item {
+		width: 45%;
+		float: left;
+		margin-right: 2%;
+	}
+
+	.concert-feed .feed-item {
+		clear: none;
+	}
+
+	.concert-copy {
+		width: 60%;
+	}
+    
     /* Footer =================================*/
     footer {
         width: 100%;
         clear: both;
     }
+
     #footer-logo {
         width: 30%;
         margin: auto;
     }
-    .clear-footer {
-        clear: both;
-    }
 }
 
+
 @media screen and (min-width: 940px) {
-    h1 {
-        font-size: 1.6em;
-        line-height: 1.8;
-    }
-    h2 {
-        font-size: 1.4em;
-    }
 
-    /* Header =================================*/
-    #logo {
-        width: 30%;
-    }
-    nav {
-        width: 60%;
-    }
-    nav ul li {
-        top: 28px;
-    }
+	h1 {
+		font-size: 1.6em;
+		line-height: 1.8;
+	}
 
-    /* Main =================================*/
-    main {
-        margin-top: 20px;
-    }
-    /* Top Story =================================*/
-    .top-story {
-        width: 65%;
-        float: left;
-        border: none;
-        padding-top: 10px;
-        border-right:1px solid #ccc;
-        padding-right:2%;
-    }
-    .top-img {
-        width: 100%;
-        max-width: 620px;
-        padding-bottom: 1em;
-    }
-    .top-img img {
-        max-width: 620px;
-    }
-    
-    .top-info{
-        width: 100%;
-        float: none;
-    }
+	h2 {
+		font-size: 1.4em;	
+	}
+	
+	/* Header =========================== */
+	#logo {
+		width: 30%;
+	}
+	
+	nav {
+		width: 60%;
+	}
 
-    /* Sidebar =================================*/   
-    .sidebar {
-        clear: none;
-        width: 30%;
-        float: right;
-    }
-    .sidebar-faq {
-        border: none;
-    }
+	nav ul li {
+		top: 28px;
+	}
+	
+/*	Main Content =========================== */
 
-    /* News/reviews Feed Section ===================*/
-    .feed {
-        clear: both;
-        width: 100%;
-        float: none;
-        padding-top: 20px;
-        border-top: 1px solid #ccc;
-        border-right: none;
-    }
-        .feed p {
-            display: block;
-            margin-top: 0;
-        }
-        .feed h2 {
-            margin: 0;
-        }
-    .feed-img {
-        width: 20%;
-    }
+	main {
+		margin-top: 20px;
+	}
+	
+	/* Featured News Item =========================== */
+	
+	.top-story {
+		width: 65%;
+		float: left;
+		border: none;
+		padding-top: 10px;
+		border-right:1px solid #ccc;
+		padding-right:2%;
+	}
 
-    /* Detailed Pages =================================*/
-    article.detailed-content {
-        width: 65%;
-        float: left;
-        padding-right: 2.5%;
-        border-right: 1px solid #ccc;
-    }
-    .reviews-img,
-    .news-img {
-        width: 100%;
-        float: none;
-    }
-    .detail-title {
-        width: 100%;
-        float: none;
-    }
-    aside.detail {
-        width: 30%;
-        float: left;
-        padding-left: 2%;
-    }
-        aside.detail .newsletter input {
-            display: block;
-            width: 100%;
-        }
-        aside.detail .newsletter .btn{
-            width: 100%;
-        }
-    
-        aside.detail .newsletter input[type="text"] {
-            margin-right: 0;
-        }
+	.top-img {
+		width: 100%;
+		padding-bottom: 1em;
+	}
+	
+	.top-img img {
+		max-width: 620px;
+	}
 
-    /* Footer =================================*/
-    footer {
-        width: 100%;
-    }
-    #footer-logo {
-        width: 20%;
-    }
+	.top-info {
+		width: 100%;
+		float: none;
+	}
+	
+	/* Side Bar =========================== */
+
+	.sidebar {
+		clear:none;
+		width:30%;
+		float:right;
+	}
+	
+	.sidebar-faq {
+		border: none;
+	}
+	
+	/* News/Reviews Feed Section =========================== */
+	
+	.feed {
+		width: 100%;
+		float: none;
+		clear: both;
+		padding-top: 20px;
+		border-top: 1px solid #ccc;
+		border-right: none;
+	}
+
+		.feed p {
+			display: block;
+			margin-top: 0;
+		}
+	
+		.feed h2 {
+			margin: 0;
+		}
+	
+	.feed-img {
+		width: 20%;
+	}
+	
+	/* DETAILED PAGES ================================ */
+	
+	article.detailed-content {
+		width: 65%;
+		float: left;
+		padding-right: 2.5%;
+		border-right: 1px solid #ccc;
+	}
+	
+	.reviews-img, .news-img {
+		width: 100%;
+		float: none;
+	}
+	
+	.detail-title {
+		width: 100%;
+		float: none;
+	}
+	.detail {
+		width: 30%;
+		float: left;
+		padding-left: 2%;
+	}
+
+		.detail .newsletter input {
+			display: block;
+			width: 100%;
+		}
+	
+		.detail .newsletter .btn {
+			width: 100%;
+		}
+	
+		aside.detail .newsletter input[type="text"] {
+			margin-right: 0;
+		}
+	
+	/* ABOUT PAGE ================================ */
+	
+	.team-member {
+		padding:15px 0;
+	}
+	.team-img {
+		width: 20%;
+		padding-bottom: 20%;
+		margin-right: 5%;
+	}
+	.team-name {
+		margin-top: 0;
+	}
+	.team-description {
+		display: block;
+	}
+
+    /* Concert PAGE ================================ */
+	.concert-feed {
+		width: 70%;
+		float: left;
+	}
+
+	.concert-main aside {
+		display: block;
+		float: left;
+		width: 20%;
+	}	
+	
+	/* Footer =========================== */
+	footer{
+		width: 100%;
+	}	
+
+	#footer-logo{
+		width: 20%;
+	}
 }
 
 /* ==========================================================================
